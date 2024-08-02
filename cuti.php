@@ -58,6 +58,7 @@ class cuti{
 
 
 class pilih extends cuti{
+
     public function jenis($id){
         $query = "SELECT * FROM `detail_jenis_cuti` WHERE `jenis_cuti_id` = $id";
         $result = mysqli_query($this->connection,$query);
@@ -73,4 +74,6 @@ class pilih extends cuti{
             return $row['nama_catatan_cuti'];
         }
     }
+
+
 }

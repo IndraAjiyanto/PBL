@@ -1,3 +1,7 @@
+<?php
+require_once 'cuti.php';
+$pilih = new pilih();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,8 +67,8 @@
 <td>
             <select name="jenis_cuti_id" >
             <option selected>pilih</option>
-            <option value="1">sakit</option>
-            <option value="2">ijin</option>
+            <option value="1"><?php echo $pilih->jenis(1);?></option>
+            <option value="2"><?php echo $pilih->jenis(2);?></option>
             </select>
             </td>
             </tr>
@@ -83,8 +87,8 @@
 <td>
             <select name="catatan_cuti_id" >
             <option selected >pilih</option>
-            <option value="1">sakit</option>
-            <option value="2">ijin</option>
+            <option value="1"><?php echo $pilih->catatan(1);?></option>
+            <option value="2"><?php echo $pilih->catatan(2);?></option>
             </select>
             </td>
             </tr>
