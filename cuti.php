@@ -10,7 +10,7 @@ class cuti{
         if (mysqli_connect_error()) {
             echo "Koneksi gagal: " . mysqli_connect_error();
         }
-    
+
         $this->tgl = $tgl;
         $this->nama = $nama;
         $this->jabatan = $jabatan;
@@ -33,8 +33,8 @@ class cuti{
         $this->dosen_id = $dosen_id;
     }
 
-    public function tambah(){
-        $query = "INSERT INTO cuti_dosen VALUE('','$this->tgl','$this->nama','$this->jabatan','$this->unit_kerja','$this->nip','$this->masa_kerja', '$this->jenis_cuti_id','$this->alasan_cuti','$this->catatan_cuti_id','$this->alamat_selama_cuti','$this->perubahan','$this->ditangguhkan','$this->ttd_dsn','$this->ttd_atasan','$this->awal_cuti','$this->akhir_cuti','$this->status','$this->telepon','$this->keterangan','$this->dosen_id')";
+    public function tambah($tgl , $nama , $jabatan , $unit_kerja , $nip , $masa_kerja , $jenis_cuti_id , $alasan_cuti , $catatan_cuti_id , $alamat_selama_cuti , $perubahan , $ditangguhkan , $ttd_dsn , $ttd_atasan , $awal_cuti , $akhir_cuti , $status , $telepon , $keterangan , $dosen_id){
+        $query = "INSERT INTO cuti_dosen VALUE('','$tgl','$nama','$jabatan','$unit_kerja','$nip','$masa_kerja', '$jenis_cuti_id','$alasan_cuti','$catatan_cuti_id','$alamat_selama_cuti','$perubahan','$ditangguhkan','$ttd_dsn','$ttd_atasan','$awal_cuti','$akhir_cuti','$status','$telepon','$keterangan','$dosen_id')";
         mysqli_query($this->connection, $query);
     }
 
@@ -44,8 +44,8 @@ class cuti{
         return mysqli_fetch_array($result);
     }
 
-    public function update($id){
-        $query = "UPDATE cuti_dosen SET tgl_pengisisan_form='$this->tgl',nama='$this->nama',jabatan='$this->jabatan',unit_kerja='$this->unit_kerja',nip='$this->nip',masa_kerja='$this->masa_kerja', jenis_cuti_id='$this->jenis_cuti_id',alasan_cuti='$this->alasan_cuti',catatan_cuti_id='$this->catatan_cuti_id',alamat_selama_cuti='$this->alamat_selama_cuti',perubahan='$this->perubahan',ditangguhkan='$this->ditangguhkan',ttd_dsn='$this->ttd_dsn',ttd_atasan='$this->ttd_atasan',awal_cuti='$this->awal_cuti',akhir_cuti='$this->akhir_cuti',status='$this->status',telepon='$this->telepon',keterangan='$this->keterangan',dosen_id='$this->dosen_id' WHERE cuti_id = '$id'";
+    public function update($id, $tgl , $nama , $jabatan , $unit_kerja , $nip , $masa_kerja , $jenis_cuti_id , $alasan_cuti , $catatan_cuti_id , $alamat_selama_cuti , $perubahan , $ditangguhkan , $ttd_dsn , $ttd_atasan , $awal_cuti , $akhir_cuti , $status , $telepon , $keterangan , $dosen_id){
+        $query = "UPDATE cuti_dosen SET tgl_pengisisan_form='$tgl',nama='$nama',jabatan='$jabatan',unit_kerja='$unit_kerja',nip='$nip',masa_kerja='$masa_kerja', jenis_cuti_id='$jenis_cuti_id',alasan_cuti='$alasan_cuti',catatan_cuti_id='$catatan_cuti_id',alamat_selama_cuti='$alamat_selama_cuti',perubahan='$perubahan',ditangguhkan='$ditangguhkan',ttd_dsn='$ttd_dsn',ttd_atasan='$ttd_atasan',awal_cuti='$awal_cuti',akhir_cuti='$akhir_cuti',status='$status',telepon='$telepon',keterangan='$keterangan',dosen_id='$dosen_id' WHERE cuti_id = '$id'";
         mysqli_query($this->connection, $query);
     }
 

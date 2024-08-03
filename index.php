@@ -1,8 +1,5 @@
 <?php
-require_once 'cuti.php';
-$all = new cuti();
-$tampil = $all->tampil();
-$pilih = new pilih();
+require_once 'koneksi.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -64,8 +61,8 @@ $pilih = new pilih();
             <td><?php echo $row['telepon']?></td>
             <td><?php echo $row['keterangan']?></td>
             <td><?php echo $row['dosen_id']?></td>
-            <td><a href="edit.php?id=<?php echo $row['cuti_id']?>">edit</a>
-            <a href="hapus.php?id=<?php echo $row['cuti_id']?>">hapus</a></td>
+            <td><a href="edit.php?action=edit&id=<?php echo $row['cuti_id']?>">edit</a>
+            <a href="koneksi.php?action=delete&id=<?php echo $row['cuti_id']?>">hapus</a></td>
         </tr>
         <?php
         }

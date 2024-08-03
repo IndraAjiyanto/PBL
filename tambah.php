@@ -1,11 +1,5 @@
 <?php
-require_once 'cuti.php';
-if(isset($_POST['submit'])){
-    $all = new cuti($_POST['tgl'],$_POST['nama'],$_POST['jabatan'],$_POST['unit_kerja'],$_POST['nip'],$_POST['masa_kerja'],$_POST['jenis_cuti_id'],$_POST['alasan_cuti'],$_POST['catatan_cuti_id'],$_POST['alamat_selama_cuti'],$_POST['perubahan'],$_POST['ditangguhkan'],$_POST['ttd_dsn'],$_POST['ttd_atasan'],$_POST['awal_cuti'],$_POST['akhir_cuti'],$_POST['status'],$_POST['telepon'],$_POST['keterangan'],$_POST['dosen_id']);
-    $tambah = $all->tambah();
-    header("location:index.php");
-}
-$pilih = new pilih();
+require_once 'koneksi.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +10,7 @@ $pilih = new pilih();
 </head>
 <body>
     <table>
-        <form action="" method="post">
+        <form action="koneksi.php?action=add" method="post">
             <tr>
             <td>
             <label>Tanggal</label>
