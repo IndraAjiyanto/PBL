@@ -65,7 +65,7 @@ $pilih = new pilih();
             <td><?php echo $row['keterangan']?></td>
             <td><?php echo $row['dosen_id']?></td>
             <td><a href="edit.php?id=<?php echo $row['cuti_id']?>">edit</a>
-            <a href="edit.php?id=<?php echo $row['cuti_id']?>">hapus</a></td>
+            <a href="hapus.php?id=<?php echo $row['cuti_id']?>">hapus</a></td>
         </tr>
         <?php
         }

@@ -49,8 +49,9 @@ class cuti{
         mysqli_query($this->connection, $query);
     }
 
-    public function hapus(){
-
+    public function hapus($id){
+        $query = "DELETE FROM cuti_dosen WHERE cuti_id=$id";
+        mysqli_query($this->connection, $query);
     }
 
     public function tampil(){
