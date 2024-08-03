@@ -36,6 +36,7 @@ $pilih = new pilih();
             <th>telepon</th>
             <th>keterangan</th>
             <th>dosen</th>
+            <th>aksi</th>
         </tr>
         <?php
         $no = 1;
@@ -63,6 +64,8 @@ $pilih = new pilih();
             <td><?php echo $row['telepon']?></td>
             <td><?php echo $row['keterangan']?></td>
             <td><?php echo $row['dosen_id']?></td>
+            <td><a href="edit.php?id=<?php echo $row['cuti_id']?>">edit</a>
+            <a href="edit.php?id=<?php echo $row['cuti_id']?>">hapus</a></td>
         </tr>
         <?php
         }
