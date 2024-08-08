@@ -55,6 +55,9 @@ class pilih extends cuti{
         $row = mysqli_fetch_array($result);
         return $row['nama_catatan_cuti'];
     }
+}
 
 
+class user extends cuti{
+    
 }

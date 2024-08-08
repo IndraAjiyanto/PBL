@@ -11,8 +11,7 @@ require_once 'koneksi.php';
 </head>
 <body>
 <table>
-        <form action="koneksi.php?action=update" method="post">
-        <input type="hidden" name="cuti_id" value="<?php echo $tampil['cuti_id'] ?>">
+        <form action="koneksi.php?action=update&id=<?php echo $tampil['cuti_id'] ?>" method="post">
             <tr>
             <td>
             <label>Tanggal</label>
